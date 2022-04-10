@@ -22,4 +22,4 @@
 
 ## Prazo
 
-🛠 Esta projeto foi iniciado no dia 28/03/2022, porém, o mesmo ainda está em desenvolvimento!!! Sendo assim, em breve espero trazer muitas novidades para este repositório.
+🛠 Esta projeto foi iniciado no dia 01/04/2022, porém, o mesmo ainda está em desenvolvimento!!! Sendo assim, em breve espero trazer muitas novidades para este repositório.
