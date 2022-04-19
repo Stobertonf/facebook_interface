@@ -76,7 +76,6 @@ List<Story> storys = [
 
 /* Lista de postagens */
 
-/*
 List<Postagem> postagens = [
   Postagem(
       usuario: usuariosOnline[0],
@@ -148,4 +147,3 @@ List<Postagem> postagens = [
       comentarios: 25,
       compartilhamentos: 3),
 ];
-*/
