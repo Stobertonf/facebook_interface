@@ -7,6 +7,8 @@ import 'package:facebook_interface/components/area.estoria.dart';
 import 'package:facebook_interface/components/botao_circulo.dart';
 import 'package:facebook_interface/components/area_criar_postagem.dart';
 
+import '../components/cartao..postagem.dart';
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -63,6 +65,7 @@ class _HomeState extends State<Home> {
               delegate: SliverChildBuilderDelegate(
             (context, indece) {
               Postagem postagem = postagens[indece];
+              return CartaoPostagem(postagem: postagem);
             },
             childCount: postagens.length,
           )),
