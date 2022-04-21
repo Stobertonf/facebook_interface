@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:facebook_interface/pages/home.dart';
+import 'package:facebook_interface/pages/principal.dart';
 import 'package:facebook_interface/uteis/paleta_cores.dart';
 
 void main() {
@@ -9,6 +10,7 @@ void main() {
     theme: ThemeData(
       scaffoldBackgroundColor: PaletaCores.scaffold,
     ),
-    home: Home(),
+    // home: Home(),
+    home: Principal(),
   ));
 }
