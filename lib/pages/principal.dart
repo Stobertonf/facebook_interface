@@ -53,7 +53,7 @@ class _PrinciaplState extends State<Principal> {
         appBar: isDesktop
             ? PreferredSize(
                 child: Container(
-                  color: Colors.orange,
+                  color: Colors.white,
                 ),
                 //Largura de acordo com o tamanho total da tela.
                 preferredSize: Size(tamanho.width, 100),
