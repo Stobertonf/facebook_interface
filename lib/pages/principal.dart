@@ -49,7 +49,6 @@ class _PrinciaplState extends State<Principal> {
     Size tamanho = MediaQuery.of(context).size;
 
     return DefaultTabController(
-      //length: 6,
       length: _icones.length,
       child: Scaffold(
         appBar: isDesktop
