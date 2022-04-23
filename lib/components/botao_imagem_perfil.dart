@@ -18,6 +18,7 @@ class BotaoImagemPerfil extends StatelessWidget {
     return InkWell(
         onTap: onTap,
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
             ImagemPerfil(
               urlImagem: usuario.urlImagem,
@@ -26,10 +27,13 @@ class BotaoImagemPerfil extends StatelessWidget {
             const SizedBox(
               width: 4,
             ),
-            Text(
-              usuario.nome,
-              style: const TextStyle(
-                fontSize: 16,
+            Flexible(
+              child: Text(
+                usuario.nome,
+                style: const TextStyle(
+                  fontSize: 16,
+                ),
+                overflow: TextOverflow.ellipsis,
               ),
             ),
           ],
