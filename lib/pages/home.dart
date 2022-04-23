@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.white,
             //expandedHeight: 250,
             floating: true, //Deixa a barra flutuante
             centerTitle: false,

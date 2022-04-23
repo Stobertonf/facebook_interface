@@ -4,6 +4,8 @@ import 'package:facebook_interface/pages/home.dart';
 import 'package:facebook_interface/uteis/responsivo.dart';
 import 'package:facebook_interface/components/navegacao_abas.dart';
 
+import '../components/navegacao_abas_desktop.dart';
+
 class Principal extends StatefulWidget {
   const Principal({Key? key}) : super(key: key);
 
@@ -47,21 +49,26 @@ class _PrinciaplState extends State<Principal> {
     Size tamanho = MediaQuery.of(context).size;
 
     return DefaultTabController(
-      length: 6,
-      //length: _icones.length,
+      length: _icones.length,
       child: Scaffold(
         appBar: isDesktop
             ? PreferredSize(
-                child: Container(
-                  color: Colors.white,
+                child: NavegacaoAbasDesktop(
+                  icones: _icones,
+                  indiceAbaSelecionada: _indiceAbaSelecionada,
+                  onTap: (indice) {
+                    setState(() {
+                      _indiceAbaSelecionada = indice;
+                    });
+                  },
                 ),
                 //Largura de acordo com o tamanho total da tela.
-                preferredSize: Size(tamanho.width, 100),
+                preferredSize: Size(tamanho.width, 65),
               )
             : null,
         body: TabBarView(
           //Removendo navegação de clicar e arrastar para o lado.
-          //physics: NeverScrollableScrollPhysics(),
+          physics: NeverScrollableScrollPhysics(),
           children: _telas,
         ),
         bottomNavigationBar: isDesktop
