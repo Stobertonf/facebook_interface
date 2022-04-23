@@ -1,18 +1,23 @@
-import 'package:flutter/material.dart';
-
-import '../uteis/paleta_cores.dart';
+import 'botao_circulo.dart';
 import 'navegacao_abas.dart';
+import '../models/usuario.dart';
+import '../uteis/paleta_cores.dart';
+import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
+import 'package:facebook_interface/components/botao_imagem_perfil.dart';
 
 class NavegacaoAbasDesktop extends StatelessWidget {
+  final Usuario usuario;
+  final Function(int) onTap;
   final List<IconData> icones;
   final int indiceAbaSelecionada;
-  final Function(int) onTap;
 
   const NavegacaoAbasDesktop({
     Key? key,
-    required this.icones,
-    required this.indiceAbaSelecionada,
     required this.onTap,
+    required this.icones,
+    required this.usuario,
+    required this.indiceAbaSelecionada,
   }) : super(key: key);
 
   @override
@@ -51,6 +56,27 @@ class NavegacaoAbasDesktop extends StatelessWidget {
               indiceAbaSelecionada: indiceAbaSelecionada,
             ),
           ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                BotaoImagemPerfil(
+                  usuario: usuario,
+                  onTap: () {},
+                ),
+                BotaoCirculo(
+                  icone: Icons.search,
+                  iconeTamanho: 30,
+                  onPressed: () {},
+                ),
+                BotaoCirculo(
+                  icone: LineIcons.facebookMessenger,
+                  iconeTamanho: 30,
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
