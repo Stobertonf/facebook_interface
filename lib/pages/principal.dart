@@ -5,15 +5,16 @@ import 'package:facebook_interface/uteis/responsivo.dart';
 import 'package:facebook_interface/components/navegacao_abas.dart';
 
 import '../components/navegacao_abas_desktop.dart';
+import '../dados/dados.dart';
 
 class Principal extends StatefulWidget {
   const Principal({Key? key}) : super(key: key);
 
   @override
-  State<Principal> createState() => _PrinciaplState();
+  State<Principal> createState() => _PrincipalState();
 }
 
-class _PrinciaplState extends State<Principal> {
+class _PrincipalState extends State<Principal> {
   final List<Widget> _telas = [
     const Home(),
     const Scaffold(
@@ -55,6 +56,7 @@ class _PrinciaplState extends State<Principal> {
             ? PreferredSize(
                 child: NavegacaoAbasDesktop(
                   icones: _icones,
+                  usuario: usuarioAtual,
                   indiceAbaSelecionada: _indiceAbaSelecionada,
                   onTap: (indice) {
                     setState(() {
