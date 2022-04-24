@@ -20,63 +20,72 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            backgroundColor: Colors.white,
-            //expandedHeight: 250,
-            floating: true, //Deixa a barra flutuante
-            centerTitle: false,
-            title: const Text(
-              "Facebook",
-              style: TextStyle(
-                color: PaletaCores.azulFacebook,
-                fontWeight: FontWeight.bold,
-                fontSize: 28,
-                letterSpacing: -1.2,
-              ),
-            ),
-            actions: [
-              BotaoCirculo(
-                icone: Icons.search,
-                iconeTamanho: 30,
-                onPressed: () {},
-              ),
-              BotaoCirculo(
-                icone: LineIcons.facebookMessenger,
-                iconeTamanho: 30,
-                onPressed: () {},
-              ),
-            ],
-          ),
-          SliverToBoxAdapter(
-            child: AreaCriarPostagem(usuario: usuarioAtual),
-          ),
-          SliverPadding(
-            padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
-            sliver: SliverToBoxAdapter(
-              child: AreaStoria(
-                usuario: usuarioAtual,
-                stories: storys,
-              ),
+      body: Container(),
+    );
+  }
+}
+
+class HomeMobile extends StatelessWidget {
+  const HomeMobile({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomScrollView(
+      slivers: [
+        SliverAppBar(
+          backgroundColor: Colors.white,
+          //expandedHeight: 250,
+          floating: true, //Deixa a barra flutuante
+          centerTitle: false,
+          title: const Text(
+            "Facebook - M",
+            style: TextStyle(
+              color: PaletaCores.azulFacebook,
+              fontWeight: FontWeight.bold,
+              fontSize: 28,
+              letterSpacing: -1.2,
             ),
           ),
-          SliverList(
-              delegate: SliverChildBuilderDelegate(
-            (context, indece) {
-              Postagem postagem = postagens[indece];
-              return CartaoPostagem(postagem: postagem);
-            },
-            childCount: postagens.length,
-          )),
-          SliverToBoxAdapter(
-            child: Container(
-              color: Colors.white,
-              height: 2000,
+          actions: [
+            BotaoCirculo(
+              icone: Icons.search,
+              iconeTamanho: 30,
+              onPressed: () {},
+            ),
+            BotaoCirculo(
+              icone: LineIcons.facebookMessenger,
+              iconeTamanho: 30,
+              onPressed: () {},
+            ),
+          ],
+        ),
+        SliverToBoxAdapter(
+          child: AreaCriarPostagem(usuario: usuarioAtual),
+        ),
+        SliverPadding(
+          padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
+          sliver: SliverToBoxAdapter(
+            child: AreaStoria(
+              usuario: usuarioAtual,
+              stories: storys,
             ),
           ),
-        ],
-      ),
+        ),
+        SliverList(
+            delegate: SliverChildBuilderDelegate(
+          (context, indece) {
+            Postagem postagem = postagens[indece];
+            return CartaoPostagem(postagem: postagem);
+          },
+          childCount: postagens.length,
+        )),
+        SliverToBoxAdapter(
+          child: Container(
+            color: Colors.white,
+            height: 2000,
+          ),
+        ),
+      ],
     );
   }
 }
