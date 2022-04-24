@@ -89,3 +89,68 @@ class HomeMobile extends StatelessWidget {
     );
   }
 }
+
+class HomeDesktop extends StatelessWidget {
+  const HomeDesktop({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomScrollView(
+      slivers: [
+        SliverAppBar(
+          backgroundColor: Colors.white,
+          //expandedHeight: 250,
+          floating: true, //Deixa a barra flutuante
+          centerTitle: false,
+          title: const Text(
+            "Facebook - D",
+            style: TextStyle(
+              color: PaletaCores.azulFacebook,
+              fontWeight: FontWeight.bold,
+              fontSize: 28,
+              letterSpacing: -1.2,
+            ),
+          ),
+          actions: [
+            BotaoCirculo(
+              icone: Icons.search,
+              iconeTamanho: 30,
+              onPressed: () {},
+            ),
+            BotaoCirculo(
+              icone: LineIcons.facebookMessenger,
+              iconeTamanho: 30,
+              onPressed: () {},
+            ),
+          ],
+        ),
+        SliverPadding(
+          padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
+          sliver: SliverToBoxAdapter(
+            child: AreaStoria(
+              usuario: usuarioAtual,
+              stories: storys,
+            ),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: AreaCriarPostagem(usuario: usuarioAtual),
+        ),
+        SliverList(
+            delegate: SliverChildBuilderDelegate(
+          (context, indece) {
+            Postagem postagem = postagens[indece];
+            return CartaoPostagem(postagem: postagem);
+          },
+          childCount: postagens.length,
+        )),
+        SliverToBoxAdapter(
+          child: Container(
+            color: Colors.white,
+            height: 2000,
+          ),
+        ),
+      ],
+    );
+  }
+}
