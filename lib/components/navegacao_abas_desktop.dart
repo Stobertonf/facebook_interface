@@ -35,11 +35,12 @@ class NavegacaoAbasDesktop extends StatelessWidget {
           ),
         ],
       ),
+      //Desktop
       child: Row(
         children: [
           const Expanded(
             child: Text(
-              "Facebook - Desktop",
+              "Facebook",
               style: TextStyle(
                 color: PaletaCores.azulFacebook,
                 fontWeight: FontWeight.bold,
