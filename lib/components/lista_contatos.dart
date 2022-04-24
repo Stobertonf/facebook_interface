@@ -1,4 +1,5 @@
 import '../models/usuario.dart';
+import 'botao_imagem_perfil.dart';
 import 'package:flutter/material.dart';
 
 class ListaContatos extends StatelessWidget {
@@ -41,6 +42,24 @@ class ListaContatos extends StatelessWidget {
                 icon: Icon(Icons.more_horiz),
               ),
             ],
+          ),
+          Expanded(
+            child: ListView.builder(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              itemCount: usuarios.length,
+              itemBuilder: ((context, indice) {
+                Usuario usuario = usuarios[indice];
+                return Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 6,
+                  ),
+                  child: BotaoImagemPerfil(
+                    usuario: usuario,
+                    onTap: () {},
+                  ),
+                );
+              }),
+            ),
           ),
         ],
       ),
