@@ -10,7 +10,7 @@
 
 ## Escopo
 
-📚 Neste projeto eu irei desenvolver a interface do facebook.
+📚 Neste projeto eu tive a oportunidade de aprender a desenvolver a Interface do Facebook, utilizando o Dart & Flutter.
 
 ## Foco
 
@@ -22,4 +22,4 @@
 
 ## Prazo
 
-🛠 Esta projeto foi iniciado no dia 01/04/2022.  Sendo assim, o mesmo encontra-se em desenvolvimento. No entanto, em breve espero trazer muitas novidades para este repositório.
+🛠 Esta projeto foi iniciado no dia 01/04/2022. No entanto, eu só consegui finalizar o mesmo no dia 24/04/2022 devido a outras prioridades.
