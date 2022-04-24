@@ -23,5 +23,3 @@
 ## Prazo
 
 🛠 Esta projeto foi iniciado no dia 01/04/2022.  Sendo assim, o mesmo encontra-se em desenvolvimento. No entanto, em breve espero trazer muitas novidades para este repositório.
-
-<img src="relative/path/in/repository/to/facebook.jpg" width="128"/>
