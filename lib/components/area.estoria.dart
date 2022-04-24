@@ -1,10 +1,10 @@
+import '../uteis/responsivo.dart';
+import 'package:flutter/material.dart';
 import 'package:facebook_interface/dados/dados.dart';
 import 'package:facebook_interface/models/modelos.dart';
 import 'package:facebook_interface/uteis/paleta_cores.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:facebook_interface/components/imagem_perfil.dart';
-
-import 'package:flutter/material.dart';
 
 class AreaStoria extends StatelessWidget {
   final Usuario usuario;
@@ -18,9 +18,10 @@ class AreaStoria extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDesktop = Responsivo.isDesktop(context);
     return Container(
       height: 200,
-      color: Colors.white,
+      color: isDesktop ? Colors.transparent : Colors.white,
       child: ListView.builder(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
           scrollDirection: Axis.horizontal,

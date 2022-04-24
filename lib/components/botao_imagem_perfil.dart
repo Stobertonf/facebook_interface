@@ -16,27 +16,28 @@ class BotaoImagemPerfil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-        onTap: onTap,
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ImagemPerfil(
-              urlImagem: usuario.urlImagem,
-              foiVisualizado: true,
-            ),
-            const SizedBox(
-              width: 4,
-            ),
-            Flexible(
-              child: Text(
-                usuario.nome,
-                style: const TextStyle(
-                  fontSize: 16,
-                ),
-                overflow: TextOverflow.ellipsis,
+      onTap: onTap,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          ImagemPerfil(
+            urlImagem: usuario.urlImagem,
+            foiVisualizado: true,
+          ),
+          const SizedBox(
+            width: 4,
+          ),
+          Flexible(
+            child: Text(
+              usuario.nome,
+              style: const TextStyle(
+                fontSize: 16,
               ),
+              overflow: TextOverflow.ellipsis,
             ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 }

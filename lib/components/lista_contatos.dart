@@ -31,15 +31,15 @@ class ListaContatos extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.video_call),
+                icon: const Icon(Icons.video_call),
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.search),
+                icon: const Icon(Icons.search),
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.more_horiz),
+                icon: const Icon(Icons.more_horiz),
               ),
             ],
           ),
