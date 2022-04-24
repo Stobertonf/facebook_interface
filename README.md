@@ -22,4 +22,4 @@
 
 ## Prazo
 
-🛠 Este projeto foi iniciado no dia 01/04/2022. No entanto, eu só consegui finalizar o mesmo no dia 24/04/2022.
+🛠 Este projeto foi iniciado no dia 01/04/2022. No entanto, eu só consegui finalizar o mesmo no dia 24/04/2022. E agora eu irei seguir com o cronograma do curso do professor e aprender a desenvolver a interface do WhatsApp Web com o Firebase.
