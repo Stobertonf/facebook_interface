@@ -58,3 +58,43 @@ class ListaOpcoes extends StatelessWidget {
     );
   }
 }
+
+class Opoes extends StatelessWidget {
+  final Color cor;
+  final String texto;
+  final IconData icone;
+  final VoidCallback onTap;
+
+  const Opoes({
+    Key? key,
+    required this.cor,
+    required this.icone,
+    required this.texto,
+    required this.onTap,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(icone, color: cor, size: 35),
+          const SizedBox(
+            width: 4,
+          ),
+          Flexible(
+            child: Text(
+              texto,
+              style: const TextStyle(
+                fontSize: 16,
+              ),
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
