@@ -1,13 +1,13 @@
+import '../uteis/responsivo.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
+import '../components/cartao..postagem.dart';
 import 'package:facebook_interface/dados/dados.dart';
 import 'package:facebook_interface/models/postagem.dart';
 import 'package:facebook_interface/uteis/paleta_cores.dart';
 import 'package:facebook_interface/components/area.estoria.dart';
 import 'package:facebook_interface/components/botao_circulo.dart';
 import 'package:facebook_interface/components/area_criar_postagem.dart';
-
-import '../components/cartao..postagem.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -20,7 +20,10 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      body: Responsivo(
+        mobile: HomeMobile(),
+        desktop: HomeDesktop(),
+      ),
     );
   }
 }
@@ -97,33 +100,6 @@ class HomeDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        SliverAppBar(
-          backgroundColor: Colors.white,
-          //expandedHeight: 250,
-          floating: true, //Deixa a barra flutuante
-          centerTitle: false,
-          title: const Text(
-            "Facebook - D",
-            style: TextStyle(
-              color: PaletaCores.azulFacebook,
-              fontWeight: FontWeight.bold,
-              fontSize: 28,
-              letterSpacing: -1.2,
-            ),
-          ),
-          actions: [
-            BotaoCirculo(
-              icone: Icons.search,
-              iconeTamanho: 30,
-              onPressed: () {},
-            ),
-            BotaoCirculo(
-              icone: LineIcons.facebookMessenger,
-              iconeTamanho: 30,
-              onPressed: () {},
-            ),
-          ],
-        ),
         SliverPadding(
           padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
           sliver: SliverToBoxAdapter(
