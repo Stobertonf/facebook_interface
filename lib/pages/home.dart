@@ -104,7 +104,7 @@ class HomeDesktop extends StatelessWidget {
         Flexible(
           flex: 2,
           child: Container(
-            color: Colors.red,
+            color: Color.fromARGB(255, 250, 251, 251),
           ),
         ),
         Spacer(), //Coloca espaçamento entre os Flexibles.
@@ -132,12 +132,12 @@ class HomeDesktop extends StatelessWidget {
                 },
                 childCount: postagens.length,
               )),
-              SliverToBoxAdapter(
+              /*  SliverToBoxAdapter(
                 child: Container(
-                  color: Colors.white,
+                  color: Colors.grey[700],
                   height: 2000,
                 ),
-              ),
+              ),*/
             ],
           ),
         ),
