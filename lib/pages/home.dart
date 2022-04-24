@@ -6,6 +6,7 @@ import '../components/cartao..postagem.dart';
 import 'package:facebook_interface/dados/dados.dart';
 import 'package:facebook_interface/models/postagem.dart';
 import 'package:facebook_interface/uteis/paleta_cores.dart';
+import 'package:facebook_interface/components/lista_opcoes.dart';
 import 'package:facebook_interface/components/area.estoria.dart';
 import 'package:facebook_interface/components/botao_circulo.dart';
 import 'package:facebook_interface/components/area_criar_postagem.dart';
@@ -41,8 +42,9 @@ class HomeMobile extends StatelessWidget {
           //expandedHeight: 250,
           floating: true, //Deixa a barra flutuante
           centerTitle: false,
+          //Mobile
           title: const Text(
-            "Facebook - M",
+            "Facebook",
             style: TextStyle(
               color: PaletaCores.azulFacebook,
               fontWeight: FontWeight.bold,
@@ -103,11 +105,14 @@ class HomeDesktop extends StatelessWidget {
       children: [
         Flexible(
           flex: 2,
-          child: Container(
-            color: Color.fromARGB(255, 250, 251, 251),
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: ListaOpcoes(
+              usuario: usuarioAtual,
+            ),
           ),
         ),
-        Spacer(), //Coloca espaçamento entre os Flexibles.
+        const Spacer(), //Coloca espaçamento entre os Flexibles.
         Flexible(
           flex: 5,
           child: CustomScrollView(
