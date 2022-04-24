@@ -51,7 +51,12 @@ class ListaOpcoes extends StatelessWidget {
             padding: const EdgeInsets.symmetric(
               vertical: 6,
             ),
-            child: Container(),
+            child: Opcao(
+              icone: item[0],
+              cor: item[1],
+              texto: item[2],
+              onTap: () {},
+            ),
           );
         }),
       ),
@@ -59,13 +64,13 @@ class ListaOpcoes extends StatelessWidget {
   }
 }
 
-class Opoes extends StatelessWidget {
+class Opcao extends StatelessWidget {
   final Color cor;
   final String texto;
   final IconData icone;
   final VoidCallback onTap;
 
-  const Opoes({
+  const Opcao({
     Key? key,
     required this.cor,
     required this.icone,
