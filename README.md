@@ -26,6 +26,8 @@
 
 ## Imagens
 
+:beers: Imagens do projeto.
+
 <p float="left" align="center">
   <img src=https://i.ibb.co/K5ZbN41/Home-Mobile.jpg width="40%" />
   <img src=https://i.ibb.co/8xSmwjQ/Home-Mobile-Status-Vistos.jpg width="40%" /> 
