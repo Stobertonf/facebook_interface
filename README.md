@@ -26,7 +26,7 @@
 
 ## Imagens
 
-:beers: Imagens do projeto.
+:camera: Imagens do projeto.
 
 <p float="left" align="center">
   <img src=https://i.ibb.co/K5ZbN41/Home-Mobile.jpg width="40%" />
